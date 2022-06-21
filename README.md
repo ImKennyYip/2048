@@ -1,5 +1,6 @@
 # [2048](https://youtu.be/XM2n1gu4530)
-2048 Coding Tutorial: https://youtu.be/XM2n1gu4530
+- Coding Tutorial: https://youtu.be/XM2n1gu4530
+- Demo: https://imkennyyip.github.io/2048/
 
 In this tutorial, you will learn how to build an identical clone of 2048. You will learn how to use the arrow keys to slide numbers around and merge tiles of the same value while totaling up the score.
 
