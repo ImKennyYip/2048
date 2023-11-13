@@ -5,6 +5,9 @@ pipeline{
         tag2="1.0"
     }
     stages{
+         stage('Checkout') {
+        checkout([$class: 'AWSCodePipelineSCM'])
+    }
         stage("Build the images "){
             steps{
                 script{
