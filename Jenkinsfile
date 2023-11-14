@@ -5,6 +5,13 @@ pipeline{
         tag2="latest"
     }
     stages{
+        stage("hello")
+        {
+            steps
+            {
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-webhook', url: 'https://github.com/ShekharRedd/game_project']])
+            }
+        }
         stage("Build the images "){
             steps{
                 script{
@@ -19,9 +26,9 @@ pipeline{
             }
                 }
             }
-            }
+        }
         
     }
 
-    
-    
+ 
+
