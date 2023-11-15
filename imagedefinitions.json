@@ -1,6 +1,6 @@
 [
   {
     "name": "ganesh",
-    "imageUri": "shekhar123reddy/sample_game:latest"
+    "imageUri": "nginx:latest"
   }
 ]
