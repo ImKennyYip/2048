@@ -12,7 +12,13 @@ pipeline{
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-webhook', url: 'https://github.com/ShekharRedd/game_project']])
             }
         }
-        stage("Build the images "){
+        
+        stage("Building image MASTER"){
+            // when{
+            //     expression{
+
+            //     }
+            // }
             steps{
                 script{
                 echo "========executing A========"
