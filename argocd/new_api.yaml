@@ -4,7 +4,7 @@ metadata:
   name:  python
   labels:
     app:  python
-  # namespace: default
+  # namespace: argocd
 spec:
   selector:
     matchLabels:
@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name:  python
-        image: jenkins/jenkins
+        image: shekhar123reddy/sample-python-api
         ports:
-        - containerPort:  8080
+        - containerPort: 5000
           name:  python 
 
 ---
@@ -28,15 +28,19 @@ apiVersion: v1
 kind: Service 
 metadata: 
   name: mysql-react
-  # namespace: default
+  # namespace: argocd
 spec: 
   selector: 
     app: python 
   type: "NodePort" 
   ports: 
   - name: mypythonp
-    port: 8080
-    targetPort: 8080
-    nodePort: 30089
+    port: 5000
+    targetPort: 5000                        
+    nodePort: 30045
+  # - name: mypythonp
+  #   port: 8080
+  #   targetPort: 8080
+  #   nodePort: 30089
 
     
