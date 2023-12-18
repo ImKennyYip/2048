@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name:  python
-        image: shekhar123reddy/sample-python-api
+        image: jenkins/jenkins
         ports:
-        - containerPort:  5000
+        - containerPort:  8080
           name:  python
 ---
 
@@ -32,8 +32,8 @@ spec:
   type: "NodePort" 
   ports: 
   - name: mypythonp
-    port: 5000
-    targetPort: 5000
-    nodePort: 30008 
+    port: 8080
+    targetPort: 8080
+    nodePort: 30089
 
     
