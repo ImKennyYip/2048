@@ -4,6 +4,7 @@ metadata:
   name:  python
   labels:
     app:  python
+  namespace: default
 spec:
   selector:
     matchLabels:
@@ -19,13 +20,15 @@ spec:
         image: jenkins/jenkins
         ports:
         - containerPort:  8080
-          name:  python
+          name:  python 
+
 ---
 
 apiVersion: v1 
 kind: Service 
 metadata: 
   name: mysql-react
+  namespace: default
 spec: 
   selector: 
     app: python 
