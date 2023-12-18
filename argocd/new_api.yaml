@@ -4,7 +4,7 @@ metadata:
   name:  python
   labels:
     app:  python
-  namespace: default
+  # namespace: default
 spec:
   selector:
     matchLabels:
@@ -28,7 +28,7 @@ apiVersion: v1
 kind: Service 
 metadata: 
   name: mysql-react
-  namespace: default
+  # namespace: default
 spec: 
   selector: 
     app: python 
