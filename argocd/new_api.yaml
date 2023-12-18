@@ -37,7 +37,7 @@ spec:
   - name: mypythonp
     port: 5000
     targetPort: 5000                        
-    nodePort: 30046
+    nodePort: 30050
   # - name: mypythonp
   #   port: 8080
   #   targetPort: 8080
