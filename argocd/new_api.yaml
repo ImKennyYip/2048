@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  python
+  labels:
+    app:  python
+spec:
+  selector:
+    matchLabels:
+      app: python
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  python
+    spec:
+      containers:
+      - name:  python
+        image: shekhar123reddy/sample-python-api
+        ports:
+        - containerPort:  5000
+          name:  python
+---
+
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: mysql-react
+spec: 
+  selector: 
+    app: python 
+  type: "NodePort" 
+  ports: 
+  - name: mypythonp
+    port: 5000
+    targetPort: 5000
+    nodePort: 30008 
+
+    
