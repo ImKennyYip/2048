@@ -18,7 +18,7 @@ spec:
       containers:
       - name:  python
         # image: shekhar123reddy/sample-python-api
-        image: siddharth67/php-random-shapes:v1
+        image: siddharth67/php-random-shapes:v3
         ports:
         - containerPort: 80
           name:  python 
