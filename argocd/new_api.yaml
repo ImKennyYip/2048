@@ -20,7 +20,7 @@ spec:
         # image: shekhar123reddy/sample-python-api
         image: siddharth67/php-random-shapes:v1
         ports:
-        - containerPort: 5000
+        - containerPort: 80
           name:  python 
 
 ---
@@ -37,7 +37,7 @@ spec:
   ports: 
   - name: mypythonp
     port: 5000
-    targetPort: 5000                        
+    targetPort: 80                        
     nodePort: 30051
   # - name: mypythonp
   #   port: 8080
