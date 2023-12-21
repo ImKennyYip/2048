@@ -15,6 +15,7 @@ pipeline{
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-webhook', url: 'https://github.com/ShekharRedd/game_project']])
             }
         }
+    
         // stage("Pull the latest code from task-management")
         // {
         //     steps{1
@@ -36,9 +37,13 @@ pipeline{
 
         stage("update the image version in game-project-repo")
         {
+            steps{
+
+            
             if(fileExists('game_project')){
                 sh "git pull"
 
+            }
             }
             
         }
