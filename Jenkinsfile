@@ -17,7 +17,7 @@ pipeline{
         }
         // stage("Pull the latest code from task-management")
         // {
-        //     steps{
+        //     steps{1
         //         script{
         //             sh "git clone https://github.com/ShekharRedd/task_management.git"
         //             dir('/var/jenkins_home/workspace/sample-argocd-pipeline/task_management')
@@ -38,13 +38,10 @@ pipeline{
         {
             if(fileExists('game_project')){
                 sh "git pull"
-                
+
             }
             
         }
-
-        
-       
         }
         
     }
