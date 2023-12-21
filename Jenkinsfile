@@ -36,8 +36,9 @@ pipeline{
 
         stage("update the image version in game-project-repo")
         {
-            if(fileExist('game_project')==1){
+            if(fileExists('game_project')){
                 sh "git pull"
+                
             }
             
         }
