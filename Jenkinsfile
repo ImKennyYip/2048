@@ -38,13 +38,14 @@ pipeline{
         stage("update the image version in game-project-repo")
         {
             steps{
-
-            
-            if(fileExists('game_project')){
-                sh "git pull"
-
+                echo "hello world"
+            script{
+                // if(fileExists('game_project')){
+                //     sh "git pull"
+                // }
+                echo "hu"
             }
-            }
+                }
             
         }
         }
