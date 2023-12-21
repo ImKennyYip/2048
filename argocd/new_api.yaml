@@ -17,10 +17,10 @@ spec:
     spec:
       containers:
       - name:  python
-        image: siddharth67/solar-system:v9
-        # image: siddharth67/php-random-shapes:v2
+        image: shekhar123reddy/python-argocd-task:59
+        # image: shekhar123reddy/python-argocd-task:59
         ports:
-        - containerPort: 80
+        - containerPort: 5004
           name:  python 
 
 ---
@@ -37,11 +37,11 @@ spec:
   ports: 
   - name: mypythonp
     port: 5000
-    targetPort: 80                        
+    targetPort: 5004
     nodePort: 30051
   # - name: mypythonp
   #   port: 8080
-  #   targetPort: 8080
+  #   targetPort: 5004
   #   nodePort: 30089
 
     
