@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  python
+  labels:
+    app:  python
+  # namespace: argocd
+spec:
+  selector:
+    matchLabels:
+      app: python
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  python
+    spec:
+      containers:
+      - name:  python
+        image: shekhar123reddy/python-argocd-task:83
+        # image: shekhar123reddy/python-argocd-task:83
+        ports:
+        - containerPort: 5004
+          name:  python 
+
+---
+
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: mysql-react
+  # namespace: argocd
+spec: 
+  selector: 
+    app: python 
+  type: "NodePort" 
+  ports: 
+  - name: mypythonp
+    port: 5000
+    targetPort: 5004
+    nodePort: 30051
+  # - name: mypythonp
+  #   port: 8080
+  #   targetPort: 5004
+  #   nodePort: 30089
+
+    
