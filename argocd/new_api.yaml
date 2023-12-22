@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
       - name:  python
-        image: shekhar123reddy/python-argocd-task:59
-        # image: shekhar123reddy/python-argocd-task:59
+        image: shekhar123reddy/python-argocd-task:89
+        # image: shekhar123reddy/python-argocd-task:89
         ports:
         - containerPort: 5004
           name:  python 
